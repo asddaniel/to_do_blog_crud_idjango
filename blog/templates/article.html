@@ -1,0 +1,20 @@
+{% extends 'layouts/base.html' %}
+
+{% block 'title' %} Article  {%endblock%}
+{% block 'content' %}
+
+<div class="container marge-top-12">
+    <div class="grid-3">
+        <div class="title">{{article.title }} ({{article.date}})</div>
+      <div class="max">
+            {{article.content}}
+      </div>
+      <div>
+        <button class="btn btn-secondary"> <a class="text-white" href="{% url 'article.edit' article.id %}">Editer </a> </button>
+        <button class="btn btn-danger">supprimer</button>
+      </div>
+    </div>
+    
+</div>
+
+{%endblock%}

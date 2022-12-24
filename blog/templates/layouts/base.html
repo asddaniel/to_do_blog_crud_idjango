@@ -1,0 +1,17 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/index.css' %}">
+        <title>{% block 'title' %}{%endblock %}</title>
+    </head>
+
+    <body>
+        {% include 'layouts/nav-bar.html' %}
+        {% block 'content' %}{% endblock %} 
+
+ 
+     </body>
+ </html>

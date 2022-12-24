@@ -1,0 +1,22 @@
+{% extends 'layouts/base.html' %}
+
+{% block 'title' %} Article  {%endblock%}
+{% block 'content' %}
+
+<div class="container marge-top-12">
+    <div class="grid-3">
+        {%  for article in articles  %}
+        <div class="card marge2">
+            <div class="cards  my-2 p-2">
+                <div class="title">{{article.title}}</div>
+                    
+                <div class="btn btn-primary"> <a href="article/{{article.id}}" class="text-white">en savoir plus </a> </div>
+                <div class="btn btn-primary">  <a href="article/{{article.id}}/edit" class="text-white"> editer</a> </div>
+            </div>
+        </div>
+       {% endfor %}
+    </div>
+    
+</div>
+
+{%endblock%}
