@@ -4,9 +4,9 @@
 {% block 'content' %}
 
 <div class="container marge-top-12">
-    <form method="post" action="/article/{{article.id}}/update" class="grid-3">
+    <form method="post" action="{% url 'article.save' %}"" class="grid-3">
         {% csrf_token %}
-        {{formulaire.as_div}}
+        {{form.as_div}}
         <div>
             <input class="btn btn-primary"  type="submit" value="enregistrer">
         </div>
