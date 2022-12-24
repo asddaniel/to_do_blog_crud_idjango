@@ -11,7 +11,7 @@
       </div>
       <div>
         <button class="btn btn-secondary"> <a class="text-white" href="{% url 'article.edit' article.id %}">Editer </a> </button>
-        <button class="btn btn-danger">supprimer</button>
+        <button class="btn btn-danger"> <a href="{% url 'article.delete' article.id %}" class="text-white">  supprimer </a></button>
       </div>
     </div>
     

@@ -7,6 +7,7 @@ urlpatterns = [
     path("article/<int:id>/edit", views.modify_article, name='article.edit'),
     path('article/<int:id>/update', views.update_article), 
     path('article/add', views.add_article, name='article.add'),
-    path('article/add/save', views.insert_article, name='article.save')
+    path('article/add/save', views.insert_article, name='article.save'),
+    path('article/<int:id>/delete', views.delete_article, name='article.delete')
 
 ]

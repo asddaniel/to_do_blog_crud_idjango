@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse
 from .models import Article
 from .forms import ArticleForm
@@ -12,6 +12,7 @@ def home(request):
 
 def article(request, id):
     article = get_object_or_404(Article, id=id)
+    # return redirect('home')
     return render(request, 'article.html', {'article': article})
 
 def modify_article(request, id):   
@@ -59,4 +60,8 @@ def insert_article(request):
         return render(request, 'error.html', {'message': 'Method not allowed'})
 
 
-
+def delete_article(request, id):
+    article = get_object_or_404(Article, id=id)
+    article.delete()
+    return redirect('home')
+    
