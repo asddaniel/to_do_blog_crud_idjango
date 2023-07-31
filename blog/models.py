@@ -6,3 +6,4 @@ class Article(models.Model):
     content = models.TextField(null=True)
     date = models.DateTimeField(auto_now_add=True)
 
+

@@ -34,6 +34,7 @@ def update_article(request, id):
             article.title = cd['title']
             article.content = cd['content']
             article.save()
+            
             return render(request, 'succes.html')
         else:
             return render(request, 'error.html', {'message': 'erreur de soumission du formulaire'})
